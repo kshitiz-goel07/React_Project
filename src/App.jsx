@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useEffect } from "react";
 
 function App() {
 
@@ -7,12 +8,15 @@ function App() {
     description: "Go to gym "
   });
 
-  setTimeout(() =>{
+  useEffect(()=>{
+    console.log("Render");
+    setInterval(() =>{
     setToDo({
-      title : "gym gogogogo",
+      title : "gym gogogogo"+ Math.random(),
       description : "Go to gym please"
     })
-  }, 5000)
+  }, 1000)
+  }, [])
   
    return (
     <div>
