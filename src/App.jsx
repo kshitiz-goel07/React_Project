@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { useEffect } from "react";
 
-function App() {
-
+function useCustomHook(){
   const [todo, setToDo]= useState({
     title: "gym",
     description: "Go to gym "
@@ -17,6 +16,13 @@ function App() {
     })
   }, 1000)
   }, [])
+
+  return todo;
+}
+
+function App() {
+
+  const todo = useCustomHook();
   
    return (
     <div>
