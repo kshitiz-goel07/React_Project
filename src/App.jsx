@@ -55,7 +55,10 @@
 function App() {
    return (
     <div>
-      todo application
+      <h1>todo application</h1>
+      <input>Add Task</input>
+      <button>Add</button>
+      hi
     </div>
    )
 
